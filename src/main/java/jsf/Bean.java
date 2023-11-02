@@ -8,7 +8,6 @@ import jakarta.enterprise.context.RequestScoped;
 /**
  * Backing bean pour champs Nombre du formulaire*
  */
-
 @Named(value = "bean")
 @RequestScoped
 public class Bean {
@@ -30,5 +29,9 @@ public class Bean {
             l.add(i);
         }
         return l;
+    }
+
+    public String afficher() {
+        return "affichage_3?nb=" + nombre + "&amp;faces-redirect=true";
     }
 }
